@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pick Your Design"
+  short_description: "用真实参考逐轮确定视觉方向，交付可直接执行的详细设计规范"
+  default_prompt: "使用 $pick-your-design，先展示真实参考让我逐轮选择，再细化内容与功能并保存完整的 design-spec.md；本次只交付 MD，不制作或发布作品。"
