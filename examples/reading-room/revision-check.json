@@ -1,0 +1,9 @@
+{
+  "test": "controlled palette revision, not a user preference",
+  "date": "2026-10-26",
+  "copy_sha256_before": "42b1b26c06211f1795fa93b56ef731410030044420148d540c0144ebfeb5c821",
+  "copy_sha256_after": "42b1b26c06211f1795fa93b56ef731410030044420148d540c0144ebfeb5c821",
+  "all_other_body_content_unchanged_after_normalizing_version_and_palette": true,
+  "superseded_colors_only_in_change_log": true,
+  "md_only_checkpoint_before_build": true
+}
