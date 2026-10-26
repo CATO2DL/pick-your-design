@@ -27,14 +27,14 @@
 
 ```sh
 mkdir -p "$HOME/.agents/skills"
-git clone https://github.com/CATO2DL/choose-visual-direction.git "$HOME/.agents/skills/pick-your-design"
+git clone https://github.com/CATO2DL/pick-your-design.git "$HOME/.agents/skills/pick-your-design"
 ```
 
 目录已存在时先检查其内容；不要删除或覆盖已有技能。Git 会拒绝克隆到已有的非空目录。安装后确认 `~/.agents/skills/pick-your-design/SKILL.md` 存在，再在 Codex 中输入 `$pick-your-design` 调用；若技能未出现，重启 Codex。
 
 也可以下载此仓库，将包含 `SKILL.md` 的仓库根目录完整放入宿主支持的技能目录，并命名为 `pick-your-design`。其他宿主的目录、加载方式和工具能力应以其文档为准；本仓库不声称已验证其他客户端兼容性，也不是插件商店安装包。
 
-仓库名是 `choose-visual-direction`，技能标识为 `pick-your-design`，显示名为 **Pick Your Design**。
+名称统一为 **Pick Your Design**；仓库地址、安装目录和技能调用标识使用对应的机器格式 `pick-your-design`。
 
 ## 调用示例
 
