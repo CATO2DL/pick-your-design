@@ -42,10 +42,16 @@ All commands below used `CATO2DL/pick-your-design`, skill name `pick-your-design
 | `npx skills list -a claude-code` | Listed the project skill before removal. |
 | `npx skills remove pick-your-design -a claude-code -y` | Removed one skill; subsequent scoped list reported no project skills. |
 | `npx skills add CATO2DL/pick-your-design` | Worked in a fresh temporary project. The CLI detected an agent terminal and used a noninteractive path; interactive chooser not tested. |
-| `npx skills update pick-your-design -p -y` | Initially checked one project skill and reported up to date; post-publication verification is recorded below. |
+| `npx skills update pick-your-design -p -y` | Initially reported up to date; after publication, updated exactly one skill to the new contents. |
 | Manual whole-repository clone into `.agents/skills/pick-your-design` | Worked in a fresh temporary project; `git pull --ff-only` reported up to date. |
 
 The recommended README command omits `-y` so the person can review installer prompts. The same named/client options were exercised with `-y` for isolated tests. Global commands were checked against current help/source but **not executed**. No global installation is claimed as verified.
+
+### Post-publication checks
+
+Release commit `d9fdcf3` was pushed to the existing public repository. A fresh named Codex installation succeeded. The previously installed project was updated with `npx skills update pick-your-design -p -y`, which reported exactly one updated skill. All 24 installed files in both projects matched the published release byte-for-byte. GitHub’s tree hashes also matched the local commit. Anonymous repository, both README files, specification, installation guide, desktop/mobile images, and photograph URLs returned HTTP 200.
+
+Uninstall finding: `npx skills remove pick-your-design -a codex -y` reported success but retained the shared directory and lock entry because another detected client could use the same canonical path. The next listing still showed the skill. We then tested `npx skills remove pick-your-design -y`: only this named skill was removed from project client installations, its directory was gone, and the next Codex listing was empty. README instructions were corrected to this verified command. No remove-all command was used.
 
 ## B. Actual website case
 

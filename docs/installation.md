@@ -50,7 +50,7 @@ To make it available across your own projects, use `-g`:
 npx skills add CATO2DL/pick-your-design --skill pick-your-design -a codex -g
 npx skills list -g -a codex
 npx skills update pick-your-design -g -y
-npx skills remove pick-your-design -g -a codex -y
+npx skills remove pick-your-design -g -y
 ```
 
 Project scope is the default. Global scope writes to user-level locations and can affect multiple projects. We deliberately tested only temporary project installations, not your global configuration. Avoid installing both scopes unless you understand which version your client loads.
@@ -61,10 +61,10 @@ From the installed project:
 
 ```sh
 npx skills update pick-your-design -p -y
-npx skills remove pick-your-design -a codex -y
+npx skills remove pick-your-design -y
 ```
 
-For a Claude Code project, use `-a claude-code` in the removal command. Back up local edits first. The named update is project-scoped; it does not request updates to all your skills. `-y` skips confirmation, so check the name and current directory before running it.
+The removal command targets only this named skill across client installations in the current project. The global removal command above likewise targets only this name across user-level clients. Back up local edits first. To remove a separate Claude Code copy only, `npx skills remove pick-your-design -a claude-code -y` was verified. With skills CLI 1.7.4, `-a codex` can report success while retaining the shared `.agents/skills` copy because another detected client uses that same path. This occurred in our test; the named command without `-a` removed it, and the next list was empty. The named update is project-scoped; it does not request updates to all your skills. `-y` skips confirmation, so check the name and current directory before running it.
 
 ## Manual fallback
 

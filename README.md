@@ -70,11 +70,13 @@ From the same project, update only this skill:
 npx skills update pick-your-design -p -y
 ```
 
-Back up any edits to the installed skill before updating. To remove only its Codex installation:
+Back up any edits to the installed skill before updating. To remove this named skill from the current project’s client installations:
 
 ```sh
-npx skills remove pick-your-design -a codex -y
+npx skills remove pick-your-design -y
 ```
+
+This removes only `pick-your-design`, across clients in this project. With skills CLI 1.7.4, adding `-a codex` may retain the shared directory when another detected client uses it.
 
 **Skill not appearing?** Verify the project directory and installation listing; reopen the client if needed. **Installed but no images?** Installation does not supply image tools. **Only want the spec?** Say “Markdown only.” **Can I reuse a reference image?** Check that image's license separately. More in [installation and troubleshooting](docs/installation.md).
 

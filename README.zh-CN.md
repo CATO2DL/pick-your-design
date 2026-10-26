@@ -69,11 +69,13 @@ npx skills add CATO2DL/pick-your-design --skill pick-your-design -a codex
 npx skills update pick-your-design -p -y
 ```
 
-更新前备份对已安装技能的本地修改。只卸载本技能的 Codex 安装：
+更新前备份对已安装技能的本地修改。从当前项目的各客户端安装中移除这个指定技能：
 
 ```sh
-npx skills remove pick-your-design -a codex -y
+npx skills remove pick-your-design -y
 ```
+
+这只删除当前项目的 `pick-your-design`，覆盖项目内各客户端。skills CLI 1.7.4 使用共享目录时，加上 `-a codex` 可能因其他已检测客户端仍使用该目录而保留文件。
 
 **技能没出现？** 检查项目目录和安装列表，必要时重新打开客户端。**安装了却没有图片？** 安装不会提供图片工具。**只想要规范？** 明确说“只交 Markdown”。**参考图能直接商用吗？** 需要单独核对许可。更多见[安装与故障排查](docs/installation.md)。
 
